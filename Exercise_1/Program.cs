@@ -1,0 +1,26 @@
+﻿Console.WriteLine("Задача 64: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.");
+Console.WriteLine("\nM = 1; N = 5. -> 1, 2, 3, 4, 5");
+Console.WriteLine("M = 4; N = 8. -> 4, 6, 7, 8");
+
+Console.Write("Задайте число M - ");
+int M = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Задайте число N - ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+int[] result = new int [N - M];
+
+void NatNumbers(int[] result)
+{
+    Console.Write($"M = {M}; N = {N}. ->");
+    for (int i = 0; i < result.Length; i++)
+    {
+        result[i] = M++;
+
+        Console.Write(result[i]);
+
+        if (i != result.Length - 1) Console.Write(", ");
+    }
+}
+
+NatNumbers(result);
